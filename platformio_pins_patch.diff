@@ -1,10 +1,10 @@
-diff --git a/Marlin/src/pins/stm32f1/pins_MKS_ROBIN_NANO.h b/Marlin/src/pins/stm32f1/pins_MKS_ROBIN_NANO.h
-index 16d6d2ffc4..826f0a9089 100644
---- a/Marlin/src/pins/stm32f1/pins_MKS_ROBIN_NANO.h
-+++ b/Marlin/src/pins/stm32f1/pins_MKS_ROBIN_NANO.h
-@@ -247,3 +247,42 @@
-   #define W25QXX_MISO_PIN                   PB14
-   #define W25QXX_SCK_PIN                    PB13
+diff --git a/Marlin/src/pins/stm32f1/pins_MKS_ROBIN_NANO_common.h b/Marlin/src/pins/stm32f1/pins_MKS_ROBIN_NANO_common.h
+index c1d0e591e9..4cb5860ceb 100644
+--- a/Marlin/src/pins/stm32f1/pins_MKS_ROBIN_NANO_common.h
++++ b/Marlin/src/pins/stm32f1/pins_MKS_ROBIN_NANO_common.h
+@@ -208,3 +208,42 @@
+   #define SPI_FLASH_MISO_PIN                PB14
+   #define SPI_FLASH_SCK_PIN                 PB13
  #endif
 +
 +#if HAS_TMC_UART
@@ -45,16 +45,3 @@ index 16d6d2ffc4..826f0a9089 100644
 +  // Reduce baud rate to improve software serial reliability
 +  #define TMC_BAUD_RATE                    19200
 +#endif // TMC2208 || TMC2209
-diff --git a/platformio.ini b/platformio.ini
-index 0abb4ac388..8c6f6dd4c9 100644
---- a/platformio.ini
-+++ b/platformio.ini
-@@ -18,7 +18,7 @@
- [platformio]
- src_dir      = Marlin
- boards_dir   = buildroot/share/PlatformIO/boards
--default_envs = mega2560
-+default_envs = mks_robin_nano35
- include_dir  = Marlin
- 
- #
